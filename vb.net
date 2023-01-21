@@ -1,0 +1,140 @@
+//addition of two numbers
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim A, B As Integer
+        A = Val(TextBox1.Text)
+        B = Val(TextBox2.Text)
+        TextBox3.Text = CStr(A + B)
+
+
+    End Sub
+End Class
+
+//even or odd
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim number As Integer
+        number = Val(TextBox1.Text)
+        If (number Mod 2 = 0) Then
+            TextBox2.Text = "even number"
+        Else
+            TextBox2.Text = " odd number"
+        End If
+    End Sub
+End Class
+
+//percentage
+
+Public Class Form1
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim percentage As Integer
+        percentage = TextBox1.Text
+        Select Case percentage
+            Case Is >= 60
+                Label1.Text = "First class"
+            Case Is >= 50
+                Label1.Text = " Second class"
+            Case Is >= 40
+                Label1.Text = "Third class"
+            Case Else
+                Label1.Text = "Fail"
+
+
+        End Select
+    End Sub
+    
+    //pattern
+    
+    Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim s As String = "nagpur"
+        Dim I As Integer
+        For I = 1 To Len(s)
+            Console.WriteLine(" " & Left(s, I))
+        Next
+    End Sub
+End Module
+
+//pattern
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim I As Integer
+        Dim J As Integer
+        For I = 1 To 5
+            For J = 1 To I
+                Console.Write(I)
+            Next J
+            Console.WriteLine()
+
+        Next I
+    End Sub
+End Module
+
+//largest
+
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Dim A(9), L As Integer
+        Dim I As Integer
+        Console.WriteLine("Enter 10 numbers =")
+        A(0) = Console.ReadLine()
+        L = A(0)
+        For I = 1 To 9
+            A(I) = Console.ReadLine()
+            If L < A(I) Then
+                L = A(I)
+            End If
+
+        Next I
+        Console.WriteLine("largest = " & L)
+        Console.ReadLine()
+    End Sub
+End Module
+
+//
+
+Imports System.Security.Policy
+
+Public Class Form1
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim S1, S2, S3, S4, S5, S6 As String
+        S1 = TextBox1.Text
+        S2 = TextBox2.Text
+        Dim Sitem As Object
+        Sitem = ComboBox1.SelectedItem
+        S3 = Label4.Text
+
+        If RadioButton1.Checked = True Then
+            S3 = RadioButton1.Text
+        ElseIf Radiobutton2.Checked = True Then
+            S3 = RadioButton2.Text
+        End If
+        If CheckBox1.Checked = True Then
+            S4 = CheckBox1.Text
+        Else
+            S4 = CheckBox2.Text
+        End If
+        S5 = TextBox3.Text
+        S6 = TextBox4.Text
+        MsgBox("Employee name : " + S1 + vbCrLf + "Email : " + S2 + vbCrLf + "Department : " + Sitem + vbCrLf + "Gender " + S3 + vbCrLf + "Physically Challenged : " + S4 + vbCrLf + " Address :" + S5 + vbCrLf + " Mobile no.:" + S6)
+
+    End Sub
+End Class
+
+
+    
+    
+    
+    
+
